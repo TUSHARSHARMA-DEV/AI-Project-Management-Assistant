@@ -1,0 +1,28 @@
+.architecture-container {
+  padding: 20px;
+}
+
+.architecture-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.architecture-visualization {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  overflow-x: auto;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.architecture-mermaid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

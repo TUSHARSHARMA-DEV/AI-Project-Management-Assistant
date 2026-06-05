@@ -1,0 +1,60 @@
+.mindmap-container {
+  padding: 20px;
+}
+
+.mindmap-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-button {
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.feature-button:hover:not(:disabled) {
+  background: #4f46e5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.feature-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.feature-button.secondary {
+  background: var(--surface-muted);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.feature-button.secondary:hover:not(:disabled) {
+  background: var(--surface-soft);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.mindmap-visualization {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  overflow-x: auto;
+  min-height: 400px;
+}
+
+.mindmap-visualization .mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

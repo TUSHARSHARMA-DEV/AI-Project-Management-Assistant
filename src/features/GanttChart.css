@@ -1,0 +1,165 @@
+.gantt-container {
+  padding: 20px;
+}
+
+.gantt-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+  background: var(--surface-soft);
+  border-radius: 12px;
+}
+
+.gantt-header {
+  margin-bottom: 20px;
+}
+
+.gantt-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+.gantt-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.gantt-chart {
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.gantt-tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+.gantt-task-row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 8px 0;
+  min-height: 44px;
+}
+
+.gantt-task-row:last-child {
+  border-bottom: none;
+}
+
+.task-label {
+  flex-shrink: 0;
+  width: 200px;
+  padding: 0 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gantt-bar-container {
+  flex: 1;
+  position: relative;
+  height: 28px;
+  background: linear-gradient(
+    to right,
+    rgba(102, 126, 234, 0.05) 20%,
+    transparent 20%,
+    transparent 40%,
+    rgba(102, 126, 234, 0.05) 40%,
+    rgba(102, 126, 234, 0.05) 60%,
+    transparent 60%,
+    transparent 80%,
+    rgba(102, 126, 234, 0.05) 80%
+  );
+  background-size: 20% 100%;
+}
+
+.gantt-bar {
+  position: absolute;
+  height: 100%;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  top: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.gantt-bar.status-done {
+  background: #10b981;
+}
+
+.gantt-bar.status-in-progress {
+  background: #f59e0b;
+}
+
+.gantt-bar.status-todo {
+  background: #6366f1;
+}
+
+.gantt-bar.priority-critical,
+.gantt-bar.priority-high {
+  border: 2px solid #ef4444;
+}
+
+.gantt-bar.hovered {
+  filter: brightness(1.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.gantt-timeline {
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.timeline-labels {
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.gantt-legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--surface-soft);
+  border-radius: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.legend-color.status-done {
+  background: #10b981;
+}
+
+.legend-color.status-in-progress {
+  background: #f59e0b;
+}
+
+.legend-color.status-todo {
+  background: #6366f1;
+}
